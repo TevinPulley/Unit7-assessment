@@ -1,0 +1,37 @@
+Results for the extraLargeArray:
+insert 1.0273641 s.
+append 3.78 ms.
+
+Results for the largeArray
+insert 8.85 ms
+append 573.2 μs //(μs: microSecond. equal to one millionth of a second)
+
+Results for the mediumArray
+insert 244.2 μs
+append 151.5 μs
+
+Results for the smallArray
+insert 51.3 μs
+append 107.6 μs
+
+Results for the tinyArray
+insert 39.3 μs
+append 96.5 μs
+
+#4:Write a Paragraph.
+
+    So it seems that each function is just looping through the array and multiplying
+    the number in the array by 2. Then adding the new numbers to a new array.
+    the unshift() method seems much faster with larger arrays. but when I got to
+    the small arrays it flipped and became drastically slower than the Push() method.
+     
+    
+#5: Extra credit.
+
+    At first my research was saying Push() is the faster method.
+    The reason that Push() method is not faster in the case of larger arrays here, is because
+     we did not specify the size of array we need. So it will use the default size of the 
+     array until it is filled, then after it is filled it will switch from O(1) complexity 
+     to O(n) and have to create a new contiguous block of memory which is twice the size of the 
+     default memory, and copy the existing elements to the newly allocated memory.
+     Thus adding more time the larger the array.  
